@@ -13,7 +13,7 @@ $ ->
 
 
   class AilmentView extends Backbone.View
-    template: _.template $('#ailment_template')
+    template: _.template $('#ailment_template').html()
 
     initialize: ->
       console.log "firing AilmentView 'initialize'"
@@ -24,7 +24,7 @@ $ ->
       @
 
   class MealsView extends Backbone.View
-    template: _.template $('#meals_template')
+    template: _.template $('#meals_template').html()
 
     initialize: ->
       console.log "firing MealsView 'initialize'"
@@ -36,7 +36,7 @@ $ ->
 
 
   class HistoryView extends Backbone.View
-    template: _.template $('#history_template')
+    template: _.template $('#history_template').html()
 
     initialize: ->
       console.log "firing HistoryView 'initialize'"
