@@ -1,4 +1,10 @@
 Hackathon::Application.routes.draw do
+  resources :symptoms
+
+  resources :meals
+
+  get "account/index"
+
   get "welcome/index"
   root :to => 'welcome#index'
 
