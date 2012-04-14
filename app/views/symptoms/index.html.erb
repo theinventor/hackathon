@@ -1,0 +1,23 @@
+<h1>Listing symptoms</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @symptoms.each do |symptom| %>
+  <tr>
+    <td><%= symptom.title %></td>
+    <td><%= link_to 'Show', symptom %></td>
+    <td><%= link_to 'Edit', edit_symptom_path(symptom) %></td>
+    <td><%= link_to 'Destroy', symptom, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Symptom', new_symptom_path %>
