@@ -40,10 +40,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="welcome_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="54" selection-start="443" selection-end="443" vertical-scroll-proportion="0.31893688">
+            <state line="12" column="54" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="17" selection-start="173" selection-end="173" vertical-scroll-proportion="0.23414634">
               <folding />
             </state>
           </provider>
@@ -103,6 +112,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20120414205016_add_first_sign_in_to_user.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -630,7 +640,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="54" selection-start="443" selection-end="443" vertical-scroll-proportion="0.31893688">
+        <state line="12" column="54" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="173" selection-end="173" vertical-scroll-proportion="0.23414634">
           <folding />
         </state>
       </provider>
