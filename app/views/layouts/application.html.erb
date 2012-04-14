@@ -4,18 +4,14 @@
   <title>Hackathon</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-  <a href='#'>Home</a>
-  |
-  <a href='#account'>Account</a>
-</nav>
-<div id="container" class="container-fluid">
-  <%= yield %>
-</div>
 
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

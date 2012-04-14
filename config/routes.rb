@@ -3,7 +3,7 @@ Hackathon::Application.routes.draw do
 
   resources :meals
 
-  get "account/index"
+  get 'account' => "account#index"
 
   get "welcome/index"
   root :to => 'welcome#index'

@@ -1,2 +1,38 @@
-<h1>Account#index</h1>
-<p>Find me in app/views/account/index.html.erb</p>
+<div id="page_content">
+</div>
+
+
+<% content_for :head do %>
+  <script type="text/javascript" src="/assets/underscore.js"></script><script type="text/javascript" src="/assets/backbone-min.js"></script>
+  <script type="text/javascript" src="/assets/nutritious_app.js"></script>
+<% end %>
+
+<script id="account_template" type="text/template">
+  <div>
+    <h1>Account Screen</h1>
+    <a>Log Ailment</a>
+    <a>Log Food</a>
+  </div>
+</script>
+
+<script id="ailment_template" type="text/template">
+  <div>
+    <h1>Ailment Screen</h1>
+  </div>  
+</script>
+
+
+
+<script id="meals_template" type="text/template">
+  <div>
+    <h1>Meal Screen</h1>
+  </div>
+</script>
+
+
+
+<script id="history_template" type="text/template">
+  <div>
+    <h1>History Screen</h1>
+  </div>
+</script>
