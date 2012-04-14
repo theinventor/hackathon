@@ -1,3 +1,21 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a.mhealth_connect {
+  background: url('/assets/mhealth-connect-logo.png'),linear-gradient(top, #007CA8,#00547E);
+-webkit-box-shadow: #70818b 0 2px 4px,#77c2dc 0 1px 0 inset;
+  box-shadow: #70818b 0 2px 4px,#77c2dc 0 1px 0 inset;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  display: block;
+  width: 279px;
+  height: 38px;
+  margin: 0 auto;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 0 1px 2px #004462;
+  cursor: pointer;
+  padding: 10px 0 0 10px;
+}
