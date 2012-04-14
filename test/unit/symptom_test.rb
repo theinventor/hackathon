@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: symptoms
+#
+#  id         :integer         not null, primary key
+#  title      :string(255)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
 require 'test_helper'
 
 class SymptomTest < ActiveSupport::TestCase
