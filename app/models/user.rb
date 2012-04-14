@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :meals
+  has_many :symptoms
 
   def self.fetch(access_token)
     response = RestClient.get "#{SlumberScore.setting(:mhealth_api)}v2/health/user?oauth_token=#{access_token}"

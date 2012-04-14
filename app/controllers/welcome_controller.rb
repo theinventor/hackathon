@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @user = User.fetch(access_token) if session[:access_token]
+    @user = User.fetch(session[:access_token]) if session[:access_token]
 
   end
 
