@@ -10,4 +10,9 @@ module ApplicationHelper
 
     #end
 
+  def current_user
+
+  end
+
+  helper_method :current_user
 end
