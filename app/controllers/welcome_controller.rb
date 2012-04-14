@@ -7,10 +7,10 @@ class WelcomeController < ApplicationController
 
   def callback
 
-    response = RestClient.post("https://#{SlumberScore.setting(:client_id)}:#{SlumberScore.setting(:client_secret)}@#{SlumberScore.setting(:mhealth_connect)}/access_token.json", {
+    response = RestClient.post("https://#{ApplicationHelper::CLIENT_ID}:#{ApplicationHelper::CLIENT_SECRET}@#{ApplicationHelper::MHEALTH_CONNECT}/access_token.json", {
       :grant_type => "authorization_code",
       :code => params[:code],
-      :redirect_uri => SlumberScore.setting(:redirect_uri)
+      :redirect_uri => ApplicationHelper::REDIRECT_URI
     })
 
     session[:access_token] = JSON.parse(response)["access_token"]
