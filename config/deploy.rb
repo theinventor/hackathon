@@ -6,7 +6,7 @@ server "108.229.97.28", :web, :app, :db, primary: true
 
 
 
-set :application, "blog"
+set :application, "hackathon"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
