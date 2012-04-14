@@ -2,7 +2,7 @@ class MealsController < ApplicationController
   # GET /meals
   # GET /meals.json
   def index
-    @meals = Meal.all
+    @meals = current_user.meals
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class MealsController < ApplicationController
   # GET /meals/1
   # GET /meals/1.json
   def show
-    @meal = Meal.find(params[:id])
+    @meal = current_user.meals.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class MealsController < ApplicationController
   # GET /meals/new
   # GET /meals/new.json
   def new
-    @meal = Meal.new
+    @meal = current_user.meals.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class MealsController < ApplicationController
 
   # GET /meals/1/edit
   def edit
-    @meal = Meal.find(params[:id])
+    @meal = current_user.meals.find(params[:id])
   end
 
   # POST /meals
   # POST /meals.json
   def create
-    @meal = Meal.new(params[:meal])
+    @meal = current_user.meals.build(params[:meal])
 
     respond_to do |format|
       if @meal.save
@@ -56,7 +56,7 @@ class MealsController < ApplicationController
   # PUT /meals/1
   # PUT /meals/1.json
   def update
-    @meal = Meal.find(params[:id])
+    @meal = current_user.meals.find(params[:id])
 
     respond_to do |format|
       if @meal.update_attributes(params[:meal])
@@ -72,7 +72,7 @@ class MealsController < ApplicationController
   # DELETE /meals/1
   # DELETE /meals/1.json
   def destroy
-    @meal = Meal.find(params[:id])
+    @meal = current_user.meals.find(params[:id])
     @meal.destroy
 
     respond_to do |format|

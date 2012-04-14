@@ -2,7 +2,7 @@ class SymptomsController < ApplicationController
   # GET /symptoms
   # GET /symptoms.json
   def index
-    @symptoms = Symptom.all
+    @symptoms = current_user.symptoms
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class SymptomsController < ApplicationController
   # GET /symptoms/1
   # GET /symptoms/1.json
   def show
-    @symptom = Symptom.find(params[:id])
+    @symptom = current_user.symptoms.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class SymptomsController < ApplicationController
   # GET /symptoms/new
   # GET /symptoms/new.json
   def new
-    @symptom = Symptom.new
+    @symptom = current_user.symptoms.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class SymptomsController < ApplicationController
 
   # GET /symptoms/1/edit
   def edit
-    @symptom = Symptom.find(params[:id])
+    @symptom = current_user.symptoms.find(params[:id])
   end
 
   # POST /symptoms
   # POST /symptoms.json
   def create
-    @symptom = Symptom.new(params[:symptom])
+    @symptom = current_user.symptoms.build(params[:symptom])
 
     respond_to do |format|
       if @symptom.save
@@ -56,7 +56,7 @@ class SymptomsController < ApplicationController
   # PUT /symptoms/1
   # PUT /symptoms/1.json
   def update
-    @symptom = Symptom.find(params[:id])
+    @symptom = current_user.symptoms.find(params[:id])
 
     respond_to do |format|
       if @symptom.update_attributes(params[:symptom])
@@ -72,7 +72,7 @@ class SymptomsController < ApplicationController
   # DELETE /symptoms/1
   # DELETE /symptoms/1.json
   def destroy
-    @symptom = Symptom.find(params[:id])
+    @symptom = current_user.symptoms.find(params[:id])
     @symptom.destroy
 
     respond_to do |format|
