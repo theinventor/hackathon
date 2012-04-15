@@ -112,7 +112,7 @@ $ ->
       @
 
 
-  class window.NutriciousApp extends Backbone.Router
+  class window.NutriousApp extends Backbone.Router
       
       routes:
         ''        : 'account'
