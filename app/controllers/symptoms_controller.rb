@@ -1,4 +1,5 @@
 class SymptomsController < ApplicationController
+
   # GET /symptoms
   # GET /symptoms.json
   def index
@@ -24,10 +25,11 @@ class SymptomsController < ApplicationController
   # GET /symptoms/new
   # GET /symptoms/new.json
   def new
+
     @symptom = current_user.symptoms.build
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render :partial => 'form' }
       format.json { render json: @symptom }
     end
   end
@@ -40,12 +42,14 @@ class SymptomsController < ApplicationController
   # POST /symptoms
   # POST /symptoms.json
   def create
+
     @symptom = current_user.symptoms.build(params[:symptom])
 
     respond_to do |format|
       if @symptom.save
-        format.html { redirect_to @symptom, notice: 'Symptom was successfully created.' }
-        format.json { render json: @symptom, status: :created, location: @symptom }
+        render "saved symptom!"
+        # format.html { redirect_to @symptom, notice: 'Symptom was successfully created.' }
+        # format.json { render json: @symptom, status: :created, location: @symptom }
       else
         format.html { render action: "new" }
         format.json { render json: @symptom.errors, status: :unprocessable_entity }
@@ -80,4 +84,5 @@ class SymptomsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
