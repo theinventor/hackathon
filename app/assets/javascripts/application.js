@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
+//= require underscore
+//= require backbone-min
+//= require nutritious_app

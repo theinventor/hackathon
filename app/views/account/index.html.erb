@@ -1,11 +1,12 @@
 <div id="template_container">
 </div>
 
-
-<% content_for :head do %>
-  <script type="text/javascript" src="/assets/underscore.js"></script><script type="text/javascript" src="/assets/backbone-min.js"></script>
-  <script type="text/javascript" src="/assets/nutritious_app.js"></script>
-<% end %>
+<script type="text/javascript">
+  $(function () {
+    window.App = new NutriciousApp();
+    Backbone.history.start()
+  });
+</script>
 
 <script id="account_template" type="text/template">
   <div>

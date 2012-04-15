@@ -112,7 +112,7 @@ $ ->
       @
 
 
-  class NutriciousApp extends Backbone.Router
+  class window.NutriciousApp extends Backbone.Router
       
       routes:
         ''        : 'account'
@@ -143,8 +143,3 @@ $ ->
         console.log "firing router 'history'"
         @historyView = new HistoryView()
         @container.html @historyView.render().el
-
-
-
-    window.App = new NutriciousApp()
-    Backbone.history.start()
