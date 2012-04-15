@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>Hackathon</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <link href="/assets/application.css" media="all" rel="stylesheet" type="text/css" />
+
+  <script src="/assets/application.js" type="text/javascript"></script>
   <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>
